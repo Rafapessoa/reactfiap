@@ -38,15 +38,17 @@ class Product extends Component {
         return (
             <div className="container">
                 <div align="center" className="main">
-                    <h3>{data.title} </h3>
-                    <img src={data.pictures[0].url} ></img>
+                    <h3>{data.title} </h3><br/>                    
+                    <div>
+                        <img src={data.pictures[0].url} ></img>
+                    </div><br/>                    
                     <div>
                         <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Comprar</button>
-                    </div>
-                    {data.warranty}
+                    </div><br/>                    
+                    <b>Garantia:</b> {data.warranty}<br/>                    
+                    <b>Detalhes do Produto</b><br/>
                     {data.description}
                 </div>
-
             </div>
         )
     }
